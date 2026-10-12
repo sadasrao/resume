@@ -1,0 +1,177 @@
+
+/* General page design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f0f2f8;
+    color: #263248;
+    line-height: 1.7;
+    padding: 25px;
+}
+
+/* Main heading */
+h1 {
+    text-align: center;
+    font-size: 38px;
+    color: white;
+    padding: 30px;
+    background: linear-gradient(135deg, #172554, #6d28d9);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px #17255430;
+}
+
+/* Contact information */
+body > p,
+body > center {
+    text-align: center;
+}
+
+a {
+    color: #6d28d9;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+a:hover {
+    color: #db2777;
+    text-decoration: underline;
+}
+
+/* Section headings */
+h2 {
+    color: #5b21b6;
+    font-size: 23px;
+    margin: 28px 0 14px;
+    padding: 10px 15px;
+    border-left: 5px solid #7c3aed;
+    background: #e9e4ff;
+    border-radius: 5px;
+}
+
+/* Paragraphs and lists */
+p {
+    margin: 10px 0;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+/* Education table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #17255412;
+}
+
+th {
+    background: #4c1d95;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Highlight alternate rows */
+tr:nth-child(even) {
+    background: #f3f0ff;
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+    background: #ddd6fe;
+    transition: 0.3s;
+}
+
+/* Skills and project sections */
+body > ul,
+body > table {
+    border-radius: 10px;
+}
+
+li:hover {
+    color: #6d28d9;
+}
+
+/* Smooth animation */
+h2 {
+    animation: slideIn 0.6s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 27px;
+        padding: 20px 10px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 7px;
+    }
+}
+
+/* Print-friendly resume */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+        color: black;
+    }
+
+    h1 {
+        background: white;
+        color: black;
+        box-shadow: none;
+    }
+
+    h2 {
+        color: black;
+        background: white;
+        animation: none;
+    }
+
+    table {
+        box-shadow: none;
+    }
+}
