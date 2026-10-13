@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+
+    <style>
+        .show {
+            color: green;
+        }
+
+        .hide {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="show">Show</button>
+    <label id="Showlabel">Hello World</label>
+
+    <script>
+        var boolean = false;
+
+        const button = document.getElementById('show');
+        const label = document.getElementById('Showlabel');
+
+        button.addEventListener('click', function() {
+            boolean = !boolean;
+
+            if (boolean) {
+                label.className = 'show';
+            } else {
+                label.className = 'hide';
+            }
+        });
+    </script>
+
+</body>
+</html>
