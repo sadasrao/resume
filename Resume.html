@@ -6,34 +6,234 @@
     <title>Resume</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
+  
+
+    /* A4 resume layout */
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 15px;
+        background-color: #eaeaea;
+        color: #222;
+        font-size: 10pt;
+        line-height: 1.25;
+        transition: 0.3s;
+    }
+
+    .resume {
+           position: relative;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 10mm;
+    padding-top: 15mm;
+    box-sizing: border-box;
+    background: white;
+    }
+
+    h1 {
+        font-size: 22pt;
+        color: #333;
+        margin: 0 0 5px;
+    }
+
+    h2 {
+        font-size: 12pt;
+        color: #174a73;
+        border-bottom: 1px solid #174a73;
+        padding-bottom: 3px;
+        margin: 10px 0 5px;
+    }
+
+    p {
+        margin: 3px 0;
+        overflow-wrap: anywhere;
+    }
+
+    ul {
+        margin: 4px 0;
+        padding-left: 18px;
+    }
+
+    li {
+        margin-bottom: 3px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 5px 0;
+        font-size: 8.5pt;
+        table-layout: fixed;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 5px;
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    a {
+        color: #075a9c;
+        overflow-wrap: anywhere;
+    }
+
+    img {
+        display: none;
+        position: absolute;
+        top: 20mm;
+        right: 20mm;
+        width: 28mm;
+        height: 28mm;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    button {
+        padding: 7px 12px;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    /* Dark mode */
+    body.dark {
+        background-color: #121212;
+        color: #f1f1f1;
+    }
+
+    body.dark .resume {
+        background-color: #1e1e1e;
+    }
+
+    body.dark h1,
+    body.dark h2 {
+        color: #64b5f6;
+    }
+
+    body.dark th {
+        background-color: #333;
+        color: white;
+    }
+
+    body.dark th,
+    body.dark td {
+        border-color: #555;
+    }
+
+    body.dark a {
+        color: #90caf9;
+    }
+    
+.counter-section {
+    text-align: center;
+    margin: 20px;
+}
+
+#countBtn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#countBtn:hover {
+    background-color: #0056b3;
+}
+
+.counter-section p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+    /* Print as A4 */
+    @media print {
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background: white;
+            color: black;
+            font-size: 9pt;
         }
-        h1 {
-            color: #333;
-            text-align: center;
+
+        .resume {
+            width: auto;
+            min-height: 0;
+            margin: 0;
+            padding: 0;
+            box-shadow: none;
+            background: white !important;
+            color: black !important;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
+
+        button {
+            display: none !important;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+
+        img {
+            display: block;
         }
+
+        h1, h2 {
+            color: black !important;
+        }
+
         th {
-            background-color: #f2f2f2;
-        }   
+            background: #eee !important;
+            color: black !important;
+        }
+
+        a {
+            color: black !important;
+            text-decoration: none;
+        }
+
+        h2, tr, li {
+            break-inside: avoid;
+        }
+    }
+    
+    
+
+
         </style>                
 </head>
 <body>
+    <button id="modeBtn">Dark Mode</button>
+    <div class="resume">
         <h1>SADAS A</h1>
-     <center><p> Email: sadas8724@gmail.com | Phone: +91 9150884609 | Chennai</p>
+     <p> Email: sadas8724@gmail.com | Phone: +91 9150884609 | Chennai</p>
      <p>LinkedIn: <a href="https://www.linkedin.com/in/sadas-a-2b0b1a1b6/">https://www.linkedin.com/in/sadas-a-2b0b1a1b6/</a></p>
-     <p>GitHub: <a href="https://github.com/sadasa">https://github.com/sadasa</a></p></center>
+     <p>GitHub: <a href="https://github.com/sadasa">https://github.com/sadasa</a></p>
+     <button id="show">Show image</button>
+     <img id="myImage" src="sadas.jpeg" alt="Profile Picture">
+     <!-- <script>
+                const button = document.getElementById("show");
+        const image = document.getElementById("myImage");
+
+        button.addEventListener("click", function() {
+    image.style.display =
+        image.style.display === "block" ? "none" : "block";
+
+        });
+     </script> -->
     <h2>Objective</h2>
      <p>To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills.</p>
      <h2>Education</h2>
@@ -91,5 +291,44 @@
     <ul>
         <li>Certified in AWS Cloud Practitioner.</li>
         <li>NPTEL-Programming in Java.</li>
+        </ul>
+        </div>
+        
+<div class="counter-section">
+    <button id="countBtn">Click Me</button>
+    <p>Button Clicks: <span id="count">0</span></p>
+</div>
+
+        <script>
+                const button = document.getElementById("show");
+        const image = document.getElementById("myImage");
+
+        button.addEventListener("click", function() {
+    image.style.display =
+        image.style.display === "block" ? "none" : "block";
+
+        });
+        
+const modeBtn = document.getElementById("modeBtn");
+
+modeBtn.addEventListener("click", function() {
+    document.body.classList.toggle("dark");
+
+    modeBtn.textContent =
+        document.body.classList.contains("dark")
+        ? " Light Mode"
+        : " Dark Mode";
+});
+
+
+let count = 0;
+
+document.getElementById("countBtn").onclick = function() {
+    count++;
+    document.getElementById("count").textContent = count;
+};
+
+        
+     </script>
 </body>
 </html>
